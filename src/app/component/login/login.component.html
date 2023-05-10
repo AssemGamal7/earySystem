@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" #logInForm="ngForm">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  <br>
+<div name="err" style="color: red
+;">{{err}}</div>
+  <button type="submit" [disabled]="!logInForm.valid">LogIn</button> OR
+  <a routerLink="/signup" >SignUp</a>
+</form>

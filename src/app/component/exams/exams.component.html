@@ -1,0 +1,22 @@
+<button (click)="crateExam()">Add New Exam</button>
+<h2>List of Exams</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let exam of exams">
+      <td>{{ exam.name }}</td>
+      <td>{{ exam.status }}</td>
+      <td>
+        <a [routerLink]="['/exam-form', exam.id]">Edit</a>
+        <button (click)="deleteExam(exam.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

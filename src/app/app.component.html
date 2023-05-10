@@ -1,0 +1,8 @@
+
+<nav>
+  <a routerLink="/login" *ngIf="!authService.isLoggedIN()">Login</a>
+  <a routerLink="/logout" *ngIf="authService.isLoggedIN()">Logout</a>
+</nav>
+<!-- <app-header></app-header> Include a header component -->
+<router-outlet></router-outlet> <!-- This is where your login and signup components will be displayed -->
+<!-- <app-footer></app-footer> Include a footer component -->

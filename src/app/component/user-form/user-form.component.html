@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> User</h5>
+          <form (ngSubmit)="save()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="user.name"
+                name="namo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+               placeholder="enter email"
+                class="form-control"
+                [(ngModel)]="user.email"
+                name="email"
+                value="   "
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+
+                class="form-control"
+                [(ngModel)]="user.password"
+                name="password"
+                placeholder="enter password"
+                value=" "
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                [(ngModel)]="user.phone"
+                name="phone"
+              />
+            </div>
+            <div class="form-group">
+
+              <mat-checkbox class="example-margin" [(ngModel)]="selectedStatus" name="status">Active</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="selectedType" name="type">Admin</mat-checkbox>
+              <!-- <label for="status">Status</label>
+              <input type="tel" id="status" class="form-control" [(ngModel)]="user.status" name="status"> -->
+            </div>
+            <div class="form-group">
+
+              <!-- <label for="status">Status</label>
+              <input type="tel" id="status" class="form-control" [(ngModel)]="user.status" name="status"> -->
+            </div>
+            <!-- <div class="form-group">
+              <label for="type">Type</label>
+              <input
+                type="tel"
+                id="typr"
+                class="form-control"
+                [(ngModel)]="user.type"
+                name="type"
+              />
+            </div> -->
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
